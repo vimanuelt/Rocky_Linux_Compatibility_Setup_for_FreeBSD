@@ -23,20 +23,17 @@ Installation
 
     Download or copy this script to your FreeBSD machine.
     Make the script executable with:
-    sh
-
+    ```sh
     chmod +x setup_linux_compatibility.sh
-
+    ```
     Run the script as root:
-    sh
-
+    ```sh
     sudo ./setup_linux_compatibility.sh
-
+    ```
     or directly as root:
-    sh
-
+    ```sh
     ./setup_linux_compatibility.sh
-
+    ```
 
 What This Script Does
 
