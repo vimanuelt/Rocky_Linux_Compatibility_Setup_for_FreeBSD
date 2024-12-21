@@ -21,39 +21,41 @@ Options
 
 Installation
 
-    Download or copy this script to your FreeBSD machine.
-    Make the script executable with:
+Download or copy this script to your FreeBSD machine.
+
+Make the script executable with:
     ```sh
     chmod +x setup_linux_compatibility.sh
     ```
-    Run the script as root:
+
+Run the script as root:
     ```sh
     sudo ./setup_linux_compatibility.sh
     ```
-    or directly as root:
+or directly as root:
     ```sh
     ./setup_linux_compatibility.sh
     ```
 
 What This Script Does
 
-    Updates the system (pkg update and pkg upgrade).
-    Enables Linux compatibility (sysrc linux_enable="YES" and service linux start).
-    Installs linux_base-rl9 and additional libraries for better compatibility.
-    Checks and adds necessary mount points in /etc/fstab.
-    Recommends a system reboot for changes to take effect.
+Updates the system (pkg update and pkg upgrade).
+Enables Linux compatibility (sysrc linux_enable="YES" and service linux start).
+Installs linux_base-rl9 and additional libraries for better compatibility.
+Checks and adds necessary mount points in /etc/fstab.
+Recommends a system reboot for changes to take effect.
 
 
 Notes
 
-    Compatibility: This setup has been tested with FreeBSD versions where Linux compatibility for RL9 works well, but you might encounter issues with older versions of FreeBSD.
-    Reboot: After running this script, it's highly recommended to reboot your system to ensure all changes are properly applied.
+Compatibility: This setup has been tested with FreeBSD versions where Linux compatibility for RL9 works well, but you might encounter issues with older versions of FreeBSD.
+Reboot: After running this script, it's highly recommended to reboot your system to ensure all changes are properly applied.
 
 
 Troubleshooting
 
-    If you encounter issues with package installation, ensure your package repository is up to date or check if there are known issues with the specific linux-rl9 packages.
-    For errors related to system calls or missing libraries when running Linux applications, consider installing additional Linux packages as needed.
+If you encounter issues with package installation, ensure your package repository is up to date or check if there are known issues with the specific linux-rl9 packages.
+For errors related to system calls or missing libraries when running Linux applications, consider installing additional Linux packages as needed.
 
 
 License
