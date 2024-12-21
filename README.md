@@ -13,7 +13,7 @@ This script automates the setup of Linux compatibility on FreeBSD using the Rock
 sh setup_linux_compatibility.sh [-v] [-d]
 ```
 
-## Options
+### Options
 
     -v - Verbose mode: Print more information about what the script is doing.
     -d - Dry run: Show what would be done without making any changes to the system.
