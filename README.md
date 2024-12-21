@@ -39,11 +39,11 @@ or directly as root:
 
 What This Script Does
 
-Updates the system (pkg update and pkg upgrade).
-Enables Linux compatibility (sysrc linux_enable="YES" and service linux start).
-Installs linux_base-rl9 and additional libraries for better compatibility.
-Checks and adds necessary mount points in /etc/fstab.
-Recommends a system reboot for changes to take effect.
+- Updates the system (pkg update and pkg upgrade).
+- Enables Linux compatibility (sysrc linux_enable="YES" and service linux start).
+- Installs linux_base-rl9 and additional libraries for better compatibility.
+- Checks and adds necessary mount points in /etc/fstab.
+- Recommends a system reboot for changes to take effect.
 
 
 Notes
