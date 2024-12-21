@@ -11,7 +11,7 @@ This script automates the setup of Linux compatibility on FreeBSD using the Rock
 
 ```sh
 sh setup_linux_compatibility.sh [-v] [-d]
-
+```
 
 Options
 
