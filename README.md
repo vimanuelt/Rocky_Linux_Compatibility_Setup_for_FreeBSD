@@ -7,6 +7,36 @@ This script automates the setup of Linux compatibility on FreeBSD using the Rock
 - **FreeBSD** system with root access.
 - **Internet connection** to fetch packages.
 
+
+## Installation
+
+Download or copy this script to your FreeBSD machine.
+
+```sh
+sudo pkg install git
+
+git clone https://github.com/vimanuelt/Rocky_Linux_Compatibility_Setup_for_FreeBSD
+```
+
+Make the script executable with:
+
+```sh Rocky_Linux_Compatibility_Setup_for_FreeBSD
+cd 
+chmod +x setup_linux_compatibility.sh
+```
+
+Run the script as root:
+
+```sh
+sudo ./setup_linux_compatibility.sh
+```
+
+or directly as root:
+
+```sh
+./setup_linux_compatibility.sh
+```
+
 ## Usage
 
 ```sh
@@ -18,24 +48,6 @@ Options
     -v - Verbose mode: Print more information about what the script is doing.
     -d - Dry run: Show what would be done without making any changes to the system.
 
-
-## Installation
-
-Download or copy this script to your FreeBSD machine.
-
-Make the script executable with:
-    ```sh
-    chmod +x setup_linux_compatibility.sh
-    ```
-
-Run the script as root:
-    ```sh
-    sudo ./setup_linux_compatibility.sh
-    ```
-or directly as root:
-    ```sh
-    ./setup_linux_compatibility.sh
-    ```
 
 ## What This Script Does
 
