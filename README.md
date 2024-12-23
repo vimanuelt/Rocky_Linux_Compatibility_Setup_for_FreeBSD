@@ -22,8 +22,7 @@ git clone https://github.com/vimanuelt/Rocky_Linux_Compatibility_Setup_for_FreeB
 Make the script executable with:
 
 ```sh Rocky_Linux_Compatibility_Setup_for_FreeBSD
-cd 
-chmod +x setup_linux_compatibility.sh
+cd chmod +x setup_linux_compatibility.sh
 ```
 
 Run the script as root:
