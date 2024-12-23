@@ -14,7 +14,8 @@ Download or copy this script to your FreeBSD machine.
 
 ```sh
 sudo pkg install git
-
+```
+```sh
 git clone https://github.com/vimanuelt/Rocky_Linux_Compatibility_Setup_for_FreeBSD
 ```
 
