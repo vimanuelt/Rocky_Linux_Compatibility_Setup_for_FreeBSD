@@ -22,7 +22,6 @@ git clone https://github.com/vimanuelt/Rocky_Linux_Compatibility_Setup_for_FreeB
 Make the script executable with:
 
 ```sh Rocky_Linux_Compatibility_Setup_for_FreeBSD
-```sh
 cd Rocky_Linux_Compatibility_Setup_for_FreeBSD
 ```
 ```sh
