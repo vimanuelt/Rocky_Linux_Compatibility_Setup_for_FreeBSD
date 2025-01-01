@@ -1,78 +1,101 @@
 # Rocky Linux Compatibility Setup for FreeBSD
 
-This script automates the setup of Linux compatibility on FreeBSD using the Rocky Linux 9 base system (`linux-rl9`). It installs necessary packages, enables Linux compatibility, and configures the system to run Linux applications.
+This project provides a script to set up compatibility for running Rocky Linux applications on FreeBSD. It includes a **Makefile** for streamlined installation and uninstallation of the script.
+
+## Features
+
+- Simplifies the setup of Linux compatibility on FreeBSD.
+- Provides a script for configuring the necessary compatibility settings.
+- Includes a **Makefile** for easy installation and removal.
 
 ## Prerequisites
 
-- **FreeBSD** system with root access.
-- **Internet connection** to fetch packages.
-
+- FreeBSD 12 or later.
+- Superuser (root) privileges to install and configure compatibility settings.
+- Ensure the `linux_enable` option is set in `/etc/rc.conf` if required.
 
 ## Installation
 
-Download or copy this script to your FreeBSD machine.
+1. Clone the repository:
 
-```sh
-sudo pkg install git
-```
-```sh
-git clone https://github.com/vimanuelt/Rocky_Linux_Compatibility_Setup_for_FreeBSD
-```
+   ```sh
+   git clone https://github.com/vimanuelt/Rocky_Linux_Compatibility_Setup_for_FreeBSD.git
+   cd Rocky_Linux_Compatibility_Setup_for_FreeBSD
+   ```
 
-Make the script executable with:
+2. Install the script using `make`:
 
-```sh Rocky_Linux_Compatibility_Setup_for_FreeBSD
-cd Rocky_Linux_Compatibility_Setup_for_FreeBSD
-```
-```sh
-cd chmod +x setup_linux_compatibility.sh
-```
+   ```sh
+   sudo make install
+   ```
 
-Run the script as root:
-
-```sh
-sudo ./setup_linux_compatibility.sh
-```
-
+   By default, the script will be installed to `/usr/local/sbin/rocky_compat_setup`.
 
 ## Usage
 
+Run the script to set up compatibility:
+
 ```sh
-sh setup_linux_compatibility.sh [-v] [-d]
+sudo rocky_compat_setup
 ```
 
-Options
+Follow the on-screen instructions to configure Rocky Linux compatibility on your FreeBSD system.
 
-    -v - Verbose mode: Print more information about what the script is doing.
-    -d - Dry run: Show what would be done without making any changes to the system.
+### Accessing a Rocky Linux Bash Shell
 
+Once installed and configured, you can access a bash shell in the Rocky Linux compatibility environment by running:
 
-## What This Script Does
+```sh
+sudo chroot /compat/linux /bin/bash
+```
 
-- Updates the system (pkg update and pkg upgrade).
-- Enables Linux compatibility (sysrc linux_enable="YES" and service linux start).
-- Installs linux_base-rl9 and additional libraries for better compatibility.
-- Checks and adds necessary mount points in /etc/fstab.
-- Recommends a system reboot for changes to take effect.
+This provides a Linux environment within FreeBSD for testing or running Linux applications.
 
+## Uninstallation
 
-## Notes
+To remove the script:
 
-Compatibility: This setup has been tested with FreeBSD versions where Linux compatibility for RL9 works well, but you might encounter issues with older versions of FreeBSD.
-Reboot: After running this script, it's highly recommended to reboot your system to ensure all changes are properly applied.
+```sh
+sudo make uninstall
+```
 
+This will delete the installed script from `/usr/local/sbin`.
 
-## Troubleshooting
+## Customization
 
-If you encounter issues with package installation, ensure your package repository is up to date or check if there are known issues with the specific linux-rl9 packages.
-For errors related to system calls or missing libraries when running Linux applications, consider installing additional Linux packages as needed.
+The installation location can be customized by setting the `PREFIX` and `INSTALL_DIR` variables:
 
+```sh
+sudo make install PREFIX=/custom/path
+```
+
+Similarly, you can specify a custom destination during uninstallation:
+
+```sh
+sudo make uninstall DESTDIR=/custom/path
+```
+
+## Cleaning Up
+
+The `clean` target is a placeholder for future use. Currently, it does nothing:
+
+```sh
+make clean
+```
 
 ## License
-This script is under the MIT License. See LICENSE for more details.
 
-## Contributing
-Pull requests or issues are welcome if you encounter problems or have suggestions for improvements. Please follow the existing code style and comment any changes you make.
+This project is licensed under the [MIT License](LICENSE).
 
-## Acknowledgements
-Thanks to the FreeBSD community for their extensive documentation on Linux compatibility, which was invaluable in creating this script.
+## Contributions
+
+Contributions, issues, and feature requests are welcome! Please open an issue or submit a pull request on [GitHub](https://github.com/vimanuelt/Rocky_Linux_Compatibility_Setup_for_FreeBSD).
+
+## Author
+
+Created by [Vimanuelt](https://github.com/vimanuelt). Contributions by the FreeBSD and Linux communities.
+
+---
+
+**Note:** This script is provided as-is and should be tested in a non-production environment before deployment.
+```
