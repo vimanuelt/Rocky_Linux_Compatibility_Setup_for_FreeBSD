@@ -29,7 +29,7 @@ This project provides a script to set up compatibility for running Rocky Linux a
    sudo make install
    ```
 
-   By default, the script will be installed to `/usr/local/sbin/rocky_compat_setup`.
+   By default, the script will be installed to `/usr/local/sbin/` as `setup_linux_compatibility.sh`.
 
 ## Usage
 
@@ -39,11 +39,11 @@ Run the script to set up compatibility:
 sudo setup_linux_compatibility.sh
 ```
 
-Follow the on-screen instructions to configure Rocky Linux compatibility on your FreeBSD system.
+Once installed and configured, please `reboot` your computer.
 
 ### Accessing a Rocky Linux Bash Shell
 
-Once installed and configured, you can access a bash shell in the Rocky Linux compatibility environment by running:
+You can access a bash shell in the Rocky Linux compatibility environment by running:
 
 ```sh
 sudo chroot /compat/linux /bin/bash
