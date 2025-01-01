@@ -36,7 +36,7 @@ This project provides a script to set up compatibility for running Rocky Linux a
 Run the script to set up compatibility:
 
 ```sh
-sudo rocky_compat_setup
+sudo setup_linux_compatibility.sh
 ```
 
 Follow the on-screen instructions to configure Rocky Linux compatibility on your FreeBSD system.
