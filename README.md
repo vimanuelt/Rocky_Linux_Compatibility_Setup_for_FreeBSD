@@ -10,7 +10,7 @@ This project provides a script to set up compatibility for running Rocky Linux a
 
 ## Prerequisites
 
-- FreeBSD 12 or later.
+- FreeBSD 14 or later.
 - Superuser (root) privileges to install and configure compatibility settings.
 - Ensure the `linux_enable` option is set in `/etc/rc.conf` if required.
 
